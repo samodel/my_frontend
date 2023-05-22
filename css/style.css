@@ -1,0 +1,126 @@
+@font-face {
+  font-family: "Rubik Mono One";
+  src: /* local("Rubik Mono One Regular"), local("RubikMonoOne-Regular"), */ url("../fonts/rubikmonooneregular.woff2")
+      format("woff2"),
+    url("../fonts/rubikmonooneregular.woff") format("woff")
+      /*,
+    url("rubikmonooneregular.ttf") format("truetype")*/;
+  font-weight: 400;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  font-size: 22px;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(249, 227, 227);
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  height: 50px;
+}
+.menu-mini {
+  display: none;
+}
+.block {
+  /* height: 100%; */
+  width: 100%;
+  background-color: #845c5c;
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0px;
+  right: 0px;
+  height: 90%;
+  margin-left: 0;
+}
+.block:target {
+  display: grid;
+  /* position: absolute;
+  top: 65px;
+  left: 0px;
+  right: 0px;
+  height: 100% - 50px;
+  margin-left: 0;
+  background-color: #665454; */
+}
+.list {
+  padding-left: 50px;
+  padding-right: 20px;
+}
+.logo {
+  font-family: "Rubik Mono One";
+  font-size: 30px;
+  padding-left: 35px;
+  font-weight: bold;
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgb(0, 0, 0);
+  background-color: rgb(249, 227, 227);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+}
+.footer a {
+  padding: 10px;
+}
+.footer p {
+  padding: 10px;
+}
+@media (max-width: 1080px) {
+  .list {
+    padding-left: 35px;
+    padding-right: 10px;
+  }
+}
+@media (max-width: 950px) {
+  .list {
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+  .logo {
+    padding-left: 10px;
+  }
+}
+@media (max-width: 777px) {
+  .list {
+    display: none;
+  }
+  .menu-mini {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    background-color: rgb(249, 227, 227);
+  }
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+  .logo {
+    padding: 0;
+  }
+}
